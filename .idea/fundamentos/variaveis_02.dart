@@ -6,12 +6,18 @@ main(){
   print(n1+n2);
   print(t1);
 
-  print(n1.runtimeType);
+  print(n1.runtimeType);//runtimeType imprime  tipo da variavel no console
   print(n2.runtimeType);
   print(t1.runtimeType);
 
   print(n1 is int);
   print(n1 is String);
+
+  // print("texto" +n1 +n2  )
+  // o dart nao concatena strings e numericos inferidos
+  // exceto com toString:
+  print("texto"+n1.toString() + n2.toString());
+  print("texto"+(n1 + n2).toString());
 }
 
 // com o var, o compilador infere qual é o tipo de variavel que será utilizada.

@@ -8,7 +8,7 @@ main() {
 
   print(a);
 
-  print(a++ == --b);// o b vai ser atualizado primeiramente pois e prefix
+  print(a++ == --b);// o b vai ser atualizado primeiramente pois é prefix, depois que sera incrementadoo a
   print(a == b);
 
   // Operador Lógico Unário (NOT)

@@ -44,7 +44,15 @@ main() {
   print(telefones.values);     // imprime os valores do mapa
   print(telefones.entries);    // imprime as chaves e valores
 
+  // não permitido chaves duplicadas
+
   var times = {'Vasco', 'Flamengo', 'Fortaleza', 'São Paulo'};  // cria um conjunto  = set
+
+  /*Em Flutter, um "Set" é uma coleção não ordenada e não duplicada de elementos.
+  Um Set em Dart (a linguagem de programação usada no Flutter) é semelhante a um
+   conjunto matemático, onde cada elemento só pode estar presente uma única vez,
+   independentemente de quantas vezes você tente adicioná-lo.
+   */
   print(times is Set);  // verifica se é um conjunto
   times.add('Palmeiras'); // adiciona um elemento na lista
   times.add('Palmeiras'); // adiciona um elemento na lista, não adiciona repetidos
@@ -54,4 +62,7 @@ main() {
   print(times.first);  // imprime o primeiro elemento
   print(times.last);  //
   print(times); // imprime o conjunto
+
+  // não permitido elementos duplicados
+  //não sao indexados
 }

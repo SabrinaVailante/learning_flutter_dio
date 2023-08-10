@@ -5,7 +5,7 @@ main() {
   frutas.add('melão');
 
   print(frutas);
-
+/* Generics especifica o tipo que sera usado. O map tera apenas o tipo String e o tipo double.*/
   Map<String, double> salarios = {
     'gerente': 19345.78,
     'vendedor': 16345.80,

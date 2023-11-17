@@ -34,59 +34,111 @@ class _TelaDeLoginDioState extends State<TelaDeLoginDio> {
                     ],
                   ),
                   const SizedBox(height: 20),
-                  Text("Ja tem cadastro?", style: TextStyle(color:Colors.white, fontSize: 30, fontWeight:FontWeight.w700),),
+                  const Text(
+                    "Ja tem cadastro?",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 30,
+                        fontWeight: FontWeight.w700),
+                  ),
                   const SizedBox(height: 10),
-                  Text("Faça seu login e make the change_", style: TextStyle(color:Colors.white, fontSize: 18, ),),
+                  const Text(
+                    "Faça seu login e make the change_",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                    ),
+                  ),
                   const SizedBox(height: 50),
                   Container(
                     width: double.infinity,
-                    margin: EdgeInsets.symmetric(horizontal: 30),
+                    margin: const EdgeInsets.symmetric(horizontal: 30),
                     height: 30,
                     alignment: Alignment.centerLeft,
                     child: Row(
                       children: const [
-                        Expanded(flex: 2, child: Text("Informe seu e-mail: ", style: TextStyle(color: Colors.white),)),
-                        Expanded(flex: 3, child: Text("Email", style: TextStyle(color: Colors.white),))
+                        Expanded(
+                            flex: 2,
+                            child: Text(
+                              "Informe seu e-mail: ",
+                              style: TextStyle(color: Colors.white),
+                            )),
+                        Expanded(
+                            flex: 3,
+                            child: Text(
+                              "Email",
+                              style: TextStyle(color: Colors.white),
+                            ))
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   Container(
                     width: double.infinity,
-                    margin: EdgeInsets.symmetric(horizontal: 30),
+                    margin: const EdgeInsets.symmetric(horizontal: 30),
                     height: 30,
                     alignment: Alignment.centerLeft,
                     child: Row(
                       children: const [
                         Expanded(
                           flex: 2,
-                          child: Text("Informe sua senha:",style: TextStyle(color: Colors.white),
+                          child: Text(
+                            "Informe sua senha:",
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ),
-                        ),
-                        Expanded(flex: 3, child: Text("Senha", style: TextStyle(color: Colors.white),))
+                        Expanded(
+                            flex: 3,
+                            child: Text(
+                              "Senha",
+                              style: TextStyle(color: Colors.white),
+                            ))
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   Container(
                     width: double.infinity,
-                    margin: EdgeInsets.symmetric(horizontal: 30),
-                    color: Colors.green,
+                    margin: const EdgeInsets.symmetric(horizontal: 30),
                     height: 30,
                     alignment: Alignment.center,
-                    child: Text("Login"),
+                    child: SizedBox(
+                      width: double.infinity,
+                      child: TextButton(
+                        onPressed: () {},
+                        style: ButtonStyle(
+                            shape: MaterialStateProperty.all(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20))),
+                            backgroundColor: MaterialStateProperty.all(
+                                const Color.fromRGBO(141, 79, 151, 1))),
+                        child: const Text(
+                          "ENTRAR",
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.w500),
+                        ),
+                      ),
+                    ),
                   ),
                   Expanded(child: Container()),
-                  Text("Esqueci minha senha", style: TextStyle(color: Colors.yellow, fontWeight: FontWeight.w400),),
-                  SizedBox(
+                  const Text(
+                    "Esqueci minha senha",
+                    style: TextStyle(
+                        color: Colors.yellow, fontWeight: FontWeight.w400),
+                  ),
+                  const SizedBox(
                     height: 10,
                   ),
-                  Text("Criar conta", style: TextStyle(color: Colors.green,fontWeight: FontWeight.w400),),
-                  SizedBox(
+                  const Text(
+                    "Criar conta",
+                    style: TextStyle(
+                        color: Colors.green, fontWeight: FontWeight.w400),
+                  ),
+                  const SizedBox(
                     height: 60,
                   )
                 ],

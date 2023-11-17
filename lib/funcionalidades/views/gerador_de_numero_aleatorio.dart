@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:leaningflutter/funcionalidades/services/gerar_numero_aleatorio.dart';
 
 class GeradorDeNumeroAleatorio extends StatefulWidget {
-  const GeradorDeNumeroAleatorio({super.key});
+  const GeradorDeNumeroAleatorio({Key? key}) : super(key: key);
 
   @override
   State<GeradorDeNumeroAleatorio> createState() =>
@@ -13,6 +13,7 @@ class GeradorDeNumeroAleatorio extends StatefulWidget {
 class _GeradorDeNumeroAleatorioState extends State<GeradorDeNumeroAleatorio> {
   var numeroGerado = 0;
   var quantidadeDeClicks = 0;
+
 
   @override
   Widget build(BuildContext context) {
@@ -25,35 +26,49 @@ class _GeradorDeNumeroAleatorioState extends State<GeradorDeNumeroAleatorio> {
       ),
       body: Container(
         width: double.infinity,
-        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
         child: Column(
-          crossAxisAlignment:CrossAxisAlignment.start,// mexe na posição da linha quando usa o colun
-          mainAxisAlignment: MainAxisAlignment.center,//mexe na posição culuna quando usa o Colun
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Center(
               child: Text(
-                "Foi clicado $quantidadeDeClicks vezes.",
+                "Número Gerado:",
                 style: GoogleFonts.acme(fontSize: 30),
               ),
-            ),//O center tem prioridade a orientaçao do cross e so mais Axis
+            ),
+            const SizedBox(height: 5),
             Center(
-              child: Text(
-                "o numero gerado é $numeroGerado.",
-                style: GoogleFonts.acme(fontSize: 30),
+              child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+                width: double.infinity,
+                color: const Color.fromRGBO(246, 74, 5, 0.40),
+                child: Center(
+                  child: Text(
+                    numeroGerado.toString(),
+                    style: GoogleFonts.acme(fontSize: 60),
+                  ),
+                ),
+              ),
+            ),
+            Center(
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  minimumSize: MaterialStateProperty.all(
+                      const Size(double.infinity, 50)),
+                ),
+                onPressed: () {
+                  setState(() {
+                    quantidadeDeClicks++;
+                    numeroGerado =
+                        GeradorNumeroAleatorioservice.gerarNumeroAleatorio(100);
+                  });
+                },
+                child: const Text("Gerar"),
               ),
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add_box),
-        onPressed: () {
-          setState(() {
-            quantidadeDeClicks++;
-            numeroGerado =
-                GeradorNumeroAleatorioservice.gerarNumeroAleatorio(10);
-          });
-        },
       ),
     );
   }

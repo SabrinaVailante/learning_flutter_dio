@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/-learningFlutter.iml" filepath="$PROJECT_DIR$/.idea/-learningFlutter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leaningflutter.iml" filepath="$PROJECT_DIR$/leaningflutter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/leaningflutter_android.iml" filepath="$PROJECT_DIR$/android/leaningflutter_android.iml" />
     </modules>
   </component>
 </project>

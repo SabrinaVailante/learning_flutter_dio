@@ -1,5 +1,5 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:leaningflutter/funcionalidades/services/gerar_numero_aleatorio.dart';
 
 class GeradorDeNumeroAleatorio extends StatefulWidget {
@@ -19,10 +19,12 @@ class _GeradorDeNumeroAleatorioState extends State<GeradorDeNumeroAleatorio> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Gerador de Número Aleatório"),
+        title: Text("Gerador de Número Aleatório",
+        style: GoogleFonts.kalam(),),
       ),
       body: Center(
-        child: Text(numeroGerado.toString()),
+        child: Text(numeroGerado.toString(),
+        style: GoogleFonts.acme(fontSize: 50),),
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add_box),

@@ -28,7 +28,7 @@ class _GeradorDeNumeroAleatorioState extends State<GeradorDeNumeroAleatorio> {
         child: const Icon(Icons.add_box),
         onPressed: () {
           setState(() {
-            numeroGerado = GeradorNumeroAleatorioservice.gerarNumeroAleatorio();
+            numeroGerado = GeradorNumeroAleatorioservice.gerarNumeroAleatorio(10);
           });
         },
       ),

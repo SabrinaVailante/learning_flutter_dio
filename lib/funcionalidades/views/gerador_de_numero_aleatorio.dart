@@ -12,25 +12,46 @@ class GeradorDeNumeroAleatorio extends StatefulWidget {
 
 class _GeradorDeNumeroAleatorioState extends State<GeradorDeNumeroAleatorio> {
   var numeroGerado = 0;
-
-
+  var quantidadeDeClicks = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Gerador de Número Aleatório",
-        style: GoogleFonts.kalam(),),
+        title: Text(
+          "Gerador de Número Aleatório",
+          style: GoogleFonts.kalam(),
+        ),
       ),
-      body: Center(
-        child: Text(numeroGerado.toString(),
-        style: GoogleFonts.acme(fontSize: 50),),
+      body: Container(
+        width: double.infinity,
+        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        child: Column(
+          crossAxisAlignment:CrossAxisAlignment.start,// mexe na posição da linha quando usa o colun
+          mainAxisAlignment: MainAxisAlignment.center,//mexe na posição culuna quando usa o Colun
+          children: [
+            Center(
+              child: Text(
+                "Foi clicado $quantidadeDeClicks vezes.",
+                style: GoogleFonts.acme(fontSize: 30),
+              ),
+            ),//O center tem prioridade a orientaçao do cross e so mais Axis
+            Center(
+              child: Text(
+                "o numero gerado é $numeroGerado.",
+                style: GoogleFonts.acme(fontSize: 30),
+              ),
+            ),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add_box),
         onPressed: () {
           setState(() {
-            numeroGerado = GeradorNumeroAleatorioservice.gerarNumeroAleatorio(10);
+            quantidadeDeClicks++;
+            numeroGerado =
+                GeradorNumeroAleatorioservice.gerarNumeroAleatorio(10);
           });
         },
       ),

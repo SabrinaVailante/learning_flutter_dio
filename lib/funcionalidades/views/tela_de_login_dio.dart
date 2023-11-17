@@ -34,20 +34,15 @@ class _TelaDeLoginDioState extends State<TelaDeLoginDio> {
                     ],
                   ),
                   const SizedBox(height: 20),
-                  const Text(
-                    "Ja tem cadastro?",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 30,
-                        fontWeight: FontWeight.w700),
-                  ),
+                  const Text("Ja tem cadastro?",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30,
+                          fontWeight: FontWeight.w700)),
                   const SizedBox(height: 10),
                   const Text(
                     "Faça seu login e make the change_",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                    ),
+                    style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
                   const SizedBox(height: 50),
                   Container(
@@ -55,47 +50,34 @@ class _TelaDeLoginDioState extends State<TelaDeLoginDio> {
                     margin: const EdgeInsets.symmetric(horizontal: 30),
                     height: 30,
                     alignment: Alignment.centerLeft,
-                    child: Row(
-                      children: const [
-                        Expanded(
-                            flex: 2,
-                            child: Text(
-                              "Informe seu e-mail: ",
-                              style: TextStyle(color: Colors.white),
-                            )),
-                        Expanded(
-                            flex: 3,
-                            child: Text(
-                              "Email",
-                              style: TextStyle(color: Colors.white),
-                            ))
-                      ],
-                    ),
+                    child: const TextField(
+                        decoration: InputDecoration(
+                          contentPadding: EdgeInsets.only(top: 0),
+                      enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.purple)),
+                      focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.purple)),
+                      prefixIcon: Icon(Icons.person, color: Colors.purple),
+                      hintText: "E-mail",
+                      hintStyle: TextStyle(color: Colors.white),
+                    )),
                   ),
-                  const SizedBox(
-                    height: 15,
-                  ),
+                  const SizedBox(height: 30),
                   Container(
                     width: double.infinity,
                     margin: const EdgeInsets.symmetric(horizontal: 30),
                     height: 30,
                     alignment: Alignment.centerLeft,
-                    child: Row(
-                      children: const [
-                        Expanded(
-                          flex: 2,
-                          child: Text(
-                            "Informe sua senha:",
-                            style: TextStyle(color: Colors.white),
-                          ),
-                        ),
-                        Expanded(
-                            flex: 3,
-                            child: Text(
-                              "Senha",
-                              style: TextStyle(color: Colors.white),
-                            ))
-                      ],
+                    child: const TextField(
+                      decoration: InputDecoration(
+                        contentPadding: EdgeInsets.only(top: 0),
+                          enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.purple)),
+                          focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.purple)),
+                          prefixIcon: Icon(Icons.lock, color: Colors.purple),
+                          hintText: "Senha",
+                          hintStyle: TextStyle(color: Colors.white),
+                          suffixIcon:
+                              Icon(Icons.visibility, color: Colors.white)),
                     ),
                   ),
                   const SizedBox(
@@ -109,8 +91,10 @@ class _TelaDeLoginDioState extends State<TelaDeLoginDio> {
                     child: SizedBox(
                       width: double.infinity,
                       child: TextButton(
+
                         onPressed: () {},
                         style: ButtonStyle(
+
                             shape: MaterialStateProperty.all(
                                 RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20))),

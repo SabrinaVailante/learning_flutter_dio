@@ -8,9 +8,9 @@ class TelaDeLoginDio extends StatefulWidget {
 }
 
 class _TelaDeLoginDioState extends State<TelaDeLoginDio> {
-
   String email = "";
   String senha = "";
+  bool isObscureText = true;
 
   @override
   Widget build(BuildContext context) {
@@ -55,8 +55,8 @@ class _TelaDeLoginDioState extends State<TelaDeLoginDio> {
                   margin: const EdgeInsets.symmetric(horizontal: 30),
                   height: 30,
                   alignment: Alignment.centerLeft,
-                  child:  TextField(
-                    onChanged: (value){
+                  child: TextField(
+                    onChanged: (value) {
                       email = value;
                     },
                     style: const TextStyle(color: Colors.white),
@@ -81,22 +81,34 @@ class _TelaDeLoginDioState extends State<TelaDeLoginDio> {
                   height: 30,
                   alignment: Alignment.centerLeft,
                   child: TextField(
-                    onChanged: (value){
+                    obscureText: isObscureText,
+                    onChanged: (value) {
                       senha = value;
                     },
                     style: const TextStyle(color: Colors.white),
-                    decoration: const InputDecoration(
-                      contentPadding: EdgeInsets.only(top: 0),
-                      enabledBorder: UnderlineInputBorder(
+                    decoration: InputDecoration(
+                      contentPadding: const EdgeInsets.only(top: 0),
+                      enabledBorder: const UnderlineInputBorder(
                         borderSide: BorderSide(color: Colors.purple),
                       ),
-                      focusedBorder: UnderlineInputBorder(
+                      focusedBorder: const UnderlineInputBorder(
                         borderSide: BorderSide(color: Colors.purple),
                       ),
                       prefixIcon: Icon(Icons.lock, color: Colors.purple),
                       hintText: "Senha",
                       hintStyle: TextStyle(color: Colors.white),
-                      suffixIcon: Icon(Icons.visibility, color: Colors.white),
+                      suffixIcon: InkWell(
+                          onTap: () {
+                            setState(() {
+                              isObscureText = !isObscureText;
+                            });
+
+                          },
+                          child: Icon(
+                              isObscureText
+                                  ? Icons.visibility
+                                  : Icons.visibility_off,
+                              color: Colors.white)),
                     ),
                   ),
                 ),

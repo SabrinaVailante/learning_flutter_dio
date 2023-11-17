@@ -12,10 +12,11 @@ class _TelaDeLoginDioState extends State<TelaDeLoginDio> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: const Color.fromRGBO(0, 248, 181, 0.50),
-            body: Container(
-              color: Colors.black,
-              width: double.infinity,
+            backgroundColor: const Color.fromRGBO(0, 0, 0, 0),
+            body: SingleChildScrollView(
+                child: ConstrainedBox(
+              constraints:
+                  BoxConstraints(maxHeight: MediaQuery.of(context).size.height),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -51,11 +52,13 @@ class _TelaDeLoginDioState extends State<TelaDeLoginDio> {
                     height: 30,
                     alignment: Alignment.centerLeft,
                     child: const TextField(
+                      style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
-                          contentPadding: EdgeInsets.only(top: 0),
+                      contentPadding: EdgeInsets.only(top: 0),
                       enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.purple)),
-                      focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.purple)),
+                      focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.purple)),
                       prefixIcon: Icon(Icons.person, color: Colors.purple),
                       hintText: "E-mail",
                       hintStyle: TextStyle(color: Colors.white),
@@ -68,11 +71,13 @@ class _TelaDeLoginDioState extends State<TelaDeLoginDio> {
                     height: 30,
                     alignment: Alignment.centerLeft,
                     child: const TextField(
+                      style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
-                        contentPadding: EdgeInsets.only(top: 0),
+                          contentPadding: EdgeInsets.only(top: 0),
                           enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(color: Colors.purple)),
-                          focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.purple)),
+                          focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.purple)),
                           prefixIcon: Icon(Icons.lock, color: Colors.purple),
                           hintText: "Senha",
                           hintStyle: TextStyle(color: Colors.white),
@@ -86,26 +91,23 @@ class _TelaDeLoginDioState extends State<TelaDeLoginDio> {
                   Container(
                     width: double.infinity,
                     margin: const EdgeInsets.symmetric(horizontal: 30),
-                    height: 30,
+                    height: 50,
                     alignment: Alignment.center,
                     child: SizedBox(
                       width: double.infinity,
+                      height: double.infinity,
                       child: TextButton(
-
-                        onPressed: () {},
-                        style: ButtonStyle(
-
-                            shape: MaterialStateProperty.all(
-                                RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20))),
-                            backgroundColor: MaterialStateProperty.all(
-                                const Color.fromRGBO(141, 79, 151, 1))),
-                        child: const Text(
-                          "ENTRAR",
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.w500),
-                        ),
-                      ),
+                          onPressed: () {},
+                          style: ButtonStyle(
+                              shape: MaterialStateProperty.all(
+                                  RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(15))),
+                              backgroundColor: MaterialStateProperty.all(
+                                  const Color.fromRGBO(141, 79, 151, 1))),
+                          child: const Text("ENTRAR",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w500))),
                     ),
                   ),
                   Expanded(child: Container()),
@@ -127,6 +129,6 @@ class _TelaDeLoginDioState extends State<TelaDeLoginDio> {
                   )
                 ],
               ),
-            )));
+            ))));
   }
 }

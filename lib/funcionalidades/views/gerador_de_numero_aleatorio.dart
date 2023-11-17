@@ -64,7 +64,7 @@ class _GeradorDeNumeroAleatorioState extends State<GeradorDeNumeroAleatorio> {
                         GeradorNumeroAleatorioservice.gerarNumeroAleatorio(100);
                   });
                 },
-                child: const Text("Gerar"),
+                child: const Text("Gerar", style: TextStyle(fontSize: 25),),
               ),
             ),
           ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:leaningflutter/funcionalidades/views/gerador_de_numero_aleatorio.dart';
+import 'package:leaningflutter/funcionalidades/views/tela_de_login.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.deepOrange),
       debugShowCheckedModeBanner: false,
-      home: const GeradorDeNumeroAleatorio(),
+      home: const TelaDeLogin(),
     );
   }
 }

@@ -29,7 +29,10 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const DadosCadastrais()));
+                            builder: (context) => const DadosCadastrais(
+                                  texto: "Meus Dados",
+                                  dados: ["Nome", "CPF", "idade"],
+                                )));
                   }),
               Divider(color: Colors.deepOrangeAccent),
               InkWell(

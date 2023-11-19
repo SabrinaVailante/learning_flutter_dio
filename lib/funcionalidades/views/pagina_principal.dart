@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:leaningflutter/funcionalidades/views/dados_cadastrais.dart';
 
 class PaginaPrincipal extends StatefulWidget {
   const PaginaPrincipal({super.key});
@@ -23,9 +24,14 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
                       padding: EdgeInsets.symmetric(vertical: 10),
                       width: double.infinity,
                       child: Text("Dados Cadastrais")),
-                  onTap: () {}),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const DadosCadastrais()));
+                  }),
               Divider(color: Colors.deepOrangeAccent),
-
               InkWell(
                   child: Container(
                       padding: EdgeInsets.symmetric(vertical: 10),
@@ -33,7 +39,6 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
                       child: Text("Termos de Uso")),
                   onTap: () {}),
               Divider(color: Colors.deepOrangeAccent),
-
               InkWell(
                   child: Container(
                       padding: EdgeInsets.symmetric(vertical: 10),
@@ -41,7 +46,6 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
                       child: Text("configurações")),
                   onTap: () {}),
               Divider(color: Colors.deepOrangeAccent),
-
             ],
           ),
         ),

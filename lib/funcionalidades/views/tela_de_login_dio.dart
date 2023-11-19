@@ -132,7 +132,7 @@ class _TelaDeLoginDioState extends State<TelaDeLoginDio> {
                             senhaController.text.trim() == "123") {
                           debugPrint("Login correto");
 
-                          Navigator.push(
+                          Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>

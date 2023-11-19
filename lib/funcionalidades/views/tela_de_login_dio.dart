@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:leaningflutter/funcionalidades/views/pagina_principal.dart';
 
 class TelaDeLoginDio extends StatefulWidget {
   const TelaDeLoginDio({super.key});
@@ -8,7 +9,6 @@ class TelaDeLoginDio extends StatefulWidget {
 }
 
 class _TelaDeLoginDioState extends State<TelaDeLoginDio> {
-
   TextEditingController emailController = TextEditingController(text: "");
   TextEditingController senhaController = TextEditingController(text: "");
 
@@ -108,7 +108,6 @@ class _TelaDeLoginDioState extends State<TelaDeLoginDio> {
                             setState(() {
                               isObscureText = !isObscureText;
                             });
-
                           },
                           child: Icon(
                               isObscureText
@@ -129,17 +128,22 @@ class _TelaDeLoginDioState extends State<TelaDeLoginDio> {
                     height: double.infinity,
                     child: TextButton(
                       onPressed: () {
-                        if(emailController.text.trim() == "email@email.com" && senhaController.text.trim() == "123")
-                          {
-                            debugPrint("Login correto");
-                            ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
-                                    content: Text("Login efetuado com sucesso!")));
-                          }
-                        else{
+                        if (emailController.text.trim() == "email@email.com" &&
+                            senhaController.text.trim() == "123") {
+                          debugPrint("Login correto");
+
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const PaginaPrincipal()));
                           ScaffoldMessenger.of(context).showSnackBar(
                               const SnackBar(
-                                  content: Text("Erro no login")));
+                                  content:
+                                      Text("Login efetuado com sucesso!")));
+                        } else {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(content: Text("Erro no login")));
                           debugPrint("Erro de Login");
                         }
                         print(emailController.text);

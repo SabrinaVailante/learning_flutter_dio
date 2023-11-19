@@ -8,8 +8,12 @@ class TelaDeLoginDio extends StatefulWidget {
 }
 
 class _TelaDeLoginDioState extends State<TelaDeLoginDio> {
-  String email = "";
-  String senha = "";
+
+  TextEditingController emailController = TextEditingController(text: "bia");
+  TextEditingController senhaController = TextEditingController(text: "ette");
+
+  // String email = "";
+  // String senha = "";
   bool isObscureText = true;
 
   @override
@@ -56,9 +60,10 @@ class _TelaDeLoginDioState extends State<TelaDeLoginDio> {
                   height: 30,
                   alignment: Alignment.centerLeft,
                   child: TextField(
-                    onChanged: (value) {
-                      email = value;
-                    },
+                    // onChanged: (value) {
+                    //   email = value;
+                    // },
+                    controller: emailController,
                     style: const TextStyle(color: Colors.white),
                     decoration: const InputDecoration(
                       contentPadding: EdgeInsets.only(top: 0),
@@ -82,9 +87,10 @@ class _TelaDeLoginDioState extends State<TelaDeLoginDio> {
                   alignment: Alignment.centerLeft,
                   child: TextField(
                     obscureText: isObscureText,
-                    onChanged: (value) {
-                      senha = value;
-                    },
+                    // onChanged: (value) {
+                    //   senhaController = value;
+                    // },
+                    controller: senhaController,
                     style: const TextStyle(color: Colors.white),
                     decoration: InputDecoration(
                       contentPadding: const EdgeInsets.only(top: 0),
@@ -123,8 +129,8 @@ class _TelaDeLoginDioState extends State<TelaDeLoginDio> {
                     height: double.infinity,
                     child: TextButton(
                       onPressed: () {
-                        print(email);
-                        print(senha);
+                        print(emailController.text);
+                        print(senhaController.text);
                       },
                       style: ButtonStyle(
                         shape: MaterialStateProperty.all(

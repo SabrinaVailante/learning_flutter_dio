@@ -9,8 +9,8 @@ class TelaDeLoginDio extends StatefulWidget {
 
 class _TelaDeLoginDioState extends State<TelaDeLoginDio> {
 
-  TextEditingController emailController = TextEditingController(text: "bia");
-  TextEditingController senhaController = TextEditingController(text: "ette");
+  TextEditingController emailController = TextEditingController(text: "");
+  TextEditingController senhaController = TextEditingController(text: "");
 
   // String email = "";
   // String senha = "";
@@ -129,6 +129,19 @@ class _TelaDeLoginDioState extends State<TelaDeLoginDio> {
                     height: double.infinity,
                     child: TextButton(
                       onPressed: () {
+                        if(emailController.text.trim() == "email@email.com" && senhaController.text.trim() == "123")
+                          {
+                            debugPrint("Login correto");
+                            ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                    content: Text("Login efetuado com sucesso!")));
+                          }
+                        else{
+                          ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(
+                                  content: Text("Erro no login")));
+                          debugPrint("Erro de Login");
+                        }
                         print(emailController.text);
                         print(senhaController.text);
                       },

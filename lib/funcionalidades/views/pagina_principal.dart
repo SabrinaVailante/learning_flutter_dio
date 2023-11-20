@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:leaningflutter/funcionalidades/views/dados_cadastrais.dart';
+import 'package:leaningflutter/funcionalidades/views/pagina_dois.dart';
+import 'package:leaningflutter/funcionalidades/views/pagina_tres.dart';
+import 'package:leaningflutter/funcionalidades/views/pagina_um.dart';
 
 class PaginaPrincipal extends StatefulWidget {
   const PaginaPrincipal({super.key});
@@ -52,6 +55,17 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
             ],
           ),
         ),
+      ),
+      body: Column(
+        children: [
+          Expanded(child:
+          PageView(scrollDirection: Axis.vertical, children: [
+            PaginaUm(),
+            PaginaDois(),
+            PaginaTres(),
+              Container(color: Colors.pink),
+            ],),)
+        ],
       ),
     );
   }

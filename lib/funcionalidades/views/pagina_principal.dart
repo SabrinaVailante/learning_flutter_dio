@@ -36,11 +36,11 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
                         context,
                         MaterialPageRoute(
                             builder: (context) => const DadosCadastrais(
-                                  texto: "Meus Dados",
-                                  dados: ["Nome", "CPF", "idade"],
+                                  // texto: "Meus Dados",
+                                  // dados: ["Nome", "CPF", "idade"],
                                 )));
                   }),
-              Divider(color: Colors.deepOrangeAccent),
+              const Divider(color: Colors.deepOrangeAccent),
               InkWell(
                   child: Container(
                       padding: EdgeInsets.symmetric(vertical: 10),

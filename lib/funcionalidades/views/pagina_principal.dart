@@ -12,6 +12,9 @@ class PaginaPrincipal extends StatefulWidget {
 }
 
 class _PaginaPrincipalState extends State<PaginaPrincipal> {
+  int posicaoPagina = 0;
+  PageController controlePagina = PageController(initialPage: 0);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,13 +61,49 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
       ),
       body: Column(
         children: [
-          Expanded(child:
-          PageView(scrollDirection: Axis.vertical, children: [
-            PaginaUm(),
-            PaginaDois(),
-            PaginaTres(),
-              Container(color: Colors.pink),
-            ],),)
+          Expanded(
+            child: PageView(
+              controller: controlePagina,
+              onPageChanged: (value) {
+                print(value);
+                setState(() {
+                  posicaoPagina = value;
+                });
+              },
+              scrollDirection: Axis.vertical,
+              children: [
+                PaginaUm(),
+                PaginaDois(),
+                PaginaTres(),
+                Container(color: Colors.pink),
+              ],
+            ),
+          ),
+          BottomNavigationBar(
+            onTap: (value) {
+              print(value);
+              controlePagina.jumpToPage(value);
+            },
+            currentIndex: posicaoPagina,
+            items: const [
+              BottomNavigationBarItem(
+                  label: "1",
+                  icon: Icon(Icons.home),
+                  backgroundColor: Colors.cyan),
+              BottomNavigationBarItem(
+                  label: "2",
+                  icon: Icon(Icons.add),
+                  backgroundColor: Colors.cyan),
+              BottomNavigationBarItem(
+                  label: "3",
+                  icon: Icon(Icons.person),
+                  backgroundColor: Colors.cyan),
+              BottomNavigationBarItem(
+                  label: "4",
+                  icon: Icon(Icons.tag_faces_sharp),
+                  backgroundColor: Colors.cyan),
+            ],
+          )
         ],
       ),
     );

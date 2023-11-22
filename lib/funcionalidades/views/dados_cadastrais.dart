@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:leaningflutter/repositories/nivel_repositorie.dart';
 
 class DadosCadastrais extends StatefulWidget {
   const DadosCadastrais({super.key});
@@ -12,6 +13,15 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
   TextEditingController nomeController = TextEditingController(text: "");
   TextEditingController dataNascimentoController =
       TextEditingController(text: "");
+  var niveis = [];
+  var nivelRepository = NivelRepository();
+  var nivelSelecionado = "";
+
+  @override
+  void initState() {
+    niveis = nivelRepository.retornarNiveis();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,10 +64,35 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
                 }
               },
             ),
+            const SizedBox(
+              height: 20,
+            ),
+            const Text(
+              "Nivel de Experiencia",
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
+            ),
+            Column(
+              children: niveis
+                  .map((nivel) => RadioListTile(
+                dense: true,
+                      title: Text(nivel),
+                      selected: nivelSelecionado == nivel,
+                      value: nivel,
+                      groupValue: nivelSelecionado,
+                      onChanged: (value) {
+                        print(value);
+                        setState(() {
+                          nivelSelecionado = value.toString();
+                        });
+
+                      }))
+                  .toList(),
+            ),
             TextButton(
               onPressed: () {
                 print(nomeController.text);
                 print(dataNascimentoController.text);
+                print(nivelSelecionado.toString());
               },
               child: const Text("salvar"),
             )

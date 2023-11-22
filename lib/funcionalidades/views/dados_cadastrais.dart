@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:leaningflutter/repositories/linguagens_repositories.dart';
 import 'package:leaningflutter/repositories/nivel_repositorie.dart';
 
 class DadosCadastrais extends StatefulWidget {
@@ -14,12 +15,16 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
   TextEditingController dataNascimentoController =
       TextEditingController(text: "");
   var niveis = [];
+  var linguagens = [];
   var nivelRepository = NivelRepository();
+  var linguagensRepository = LinguagensRepository();
   var nivelSelecionado = "";
+  var linguagensSelecionadas = [];
 
   @override
   void initState() {
     niveis = nivelRepository.retornarNiveis();
+    linguagens = linguagensRepository.retornarLinguagens();
     super.initState();
   }
 
@@ -29,8 +34,7 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
       appBar: AppBar(title: const Text("Dados Cadastrais")),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
           children: [
             const Text(
               "Nome",
@@ -74,7 +78,7 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
             Column(
               children: niveis
                   .map((nivel) => RadioListTile(
-                dense: true,
+                      dense: true,
                       title: Text(nivel),
                       selected: nivelSelecionado == nivel,
                       value: nivel,
@@ -84,15 +88,42 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
                         setState(() {
                           nivelSelecionado = value.toString();
                         });
-
                       }))
                   .toList(),
             ),
+            const SizedBox(
+              height: 20,
+            ),
+            const Text(
+              "Linguagens Preferidas",
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
+            ),
+            Column(
+                children: linguagens
+                    .map(
+                      (linguagem) => CheckboxListTile(
+                          dense: true,
+                          title: Text(linguagem),
+                          value: linguagensSelecionadas.contains(linguagem),
+                          onChanged: (bool? value) {
+                            if (value!){
+                              setState(() {
+                                linguagensSelecionadas.add(linguagem);
+                              });
+                            }else{
+                              setState(() {
+                                linguagensSelecionadas.remove(linguagem);
+                              });
+                            }
+                          }),
+                    )
+                    .toList()),
             TextButton(
               onPressed: () {
                 print(nomeController.text);
                 print(dataNascimentoController.text);
                 print(nivelSelecionado.toString());
+                print(linguagensSelecionadas.toString());
               },
               child: const Text("salvar"),
             )

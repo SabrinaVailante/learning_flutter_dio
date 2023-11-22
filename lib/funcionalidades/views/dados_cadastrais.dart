@@ -21,12 +21,24 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
   var nivelSelecionado = "";
   var linguagensSelecionadas = [];
   double salarioescolhido = 0.0;
+  int tempoDeexperiencia = 1;
 
   @override
   void initState() {
     niveis = nivelRepository.retornarNiveis();
     linguagens = linguagensRepository.retornarLinguagens();
     super.initState();
+  }
+
+  List<DropdownMenuItem<int>> retornarItens(int quantidadeMaxima) {
+    var itens = <DropdownMenuItem<int>>[];
+    for (var i = 0; i <= quantidadeMaxima; i++) {
+      itens.add(DropdownMenuItem(
+        child: Text(i.toString()),
+        value: i,
+      ));
+    }
+    return itens;
   }
 
   @override
@@ -107,11 +119,11 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
                           title: Text(linguagem),
                           value: linguagensSelecionadas.contains(linguagem),
                           onChanged: (bool? value) {
-                            if (value!){
+                            if (value!) {
                               setState(() {
                                 linguagensSelecionadas.add(linguagem);
                               });
-                            }else{
+                            } else {
                               setState(() {
                                 linguagensSelecionadas.remove(linguagem);
                               });
@@ -122,20 +134,32 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
             const SizedBox(
               height: 20,
             ),
-             Text(
-              "pretenção salarial R\$ ${salarioescolhido.round().toString()}",
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700)
+            const Text("Tempo de experiencia",
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700)),
+            DropdownButton(
+                value: tempoDeexperiencia,
+                isExpanded: true,
+                items: retornarItens(50),
+                onChanged: (value) {
+                  setState(() {
+                    tempoDeexperiencia = int.parse(value.toString());
+                  });
+                }),
+            const SizedBox(
+              height: 20,
             ),
-            Slider(min: 0.0,
+            Text(
+                "pretenção salarial R\$ ${salarioescolhido.round().toString()}",
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700)),
+            Slider(
+                min: 0.0,
                 max: 10000.0,
                 value: salarioescolhido,
-                onChanged: (double value){
-              setState(() {
-                salarioescolhido = value;
-              });
-              print(value);
-
-
+                onChanged: (double value) {
+                  setState(() {
+                    salarioescolhido = value;
+                  });
+                  print(value);
                 }),
             TextButton(
               onPressed: () {

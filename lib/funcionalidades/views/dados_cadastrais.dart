@@ -13,7 +13,7 @@ class DadosCadastrais extends StatefulWidget {
 class _DadosCadastraisState extends State<DadosCadastrais> {
   TextEditingController nomeController = TextEditingController(text: "");
   TextEditingController dataNascimentoController =
-      TextEditingController(text: "");
+      TextEditingController(text:"");
   var niveis = [];
   var linguagens = [];
   var nivelRepository = NivelRepository();
@@ -21,7 +21,8 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
   var nivelSelecionado = "";
   var linguagensSelecionadas = [];
   double salarioescolhido = 0.0;
-  int tempoDeexperiencia = 1;
+  int tempoDeexperiencia = 0;
+  bool salvando = false;
 
   @override
   void initState() {
@@ -47,7 +48,7 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
       appBar: AppBar(title: const Text("Dados Cadastrais")),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-        child: ListView(
+        child: salvando ? const Center(child: CircularProgressIndicator()):ListView(
           children: [
             const Text(
               "Nome",
@@ -163,10 +164,59 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
                 }),
             TextButton(
               onPressed: () {
+                if (nomeController.text.trim().length < 3) {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      content: Text("O nome deve ser preenchido")));
+                  return;
+                }
+                if (dataNascimentoController.text.trim().length <=3) {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      content: Text("Data de Nascimento Invalida")));
+                  return;
+                }
+                if (nivelSelecionado.trim()=="") {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      content: Text("o nivel deve ser selecionando")));
+                  return;
+                }
+                if (linguagensSelecionadas.isEmpty) {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      content: Text("deve ter pelomenos uma linguagem")));
+                  return;
+                }
+                if (tempoDeexperiencia==0) {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      content: Text("deve ter pelomenos um ano de experiencia em uma das linguagens")));
+                  return;
+                }
+                if (salarioescolhido==0) {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      content: Text("A pretenção salarial deve ser maior que zero")));
+                  return;
+                }
+
+
                 print(nomeController.text);
                 print(dataNascimentoController.text);
                 print(nivelSelecionado.toString());
                 print(linguagensSelecionadas.toString());
+                print(tempoDeexperiencia.toString());
+                print(salarioescolhido.toString());
+
+                setState(() {
+                  salvando=true;
+                });
+
+                Future.delayed(const Duration(seconds: 3),
+                    (){
+                  Navigator.pop(context);
+                      // setState(() {
+                      //   salvando=false;
+                      // });
+
+                    });
+
+
               },
               child: const Text("salvar"),
             )

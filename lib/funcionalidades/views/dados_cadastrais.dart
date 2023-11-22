@@ -20,6 +20,7 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
   var linguagensRepository = LinguagensRepository();
   var nivelSelecionado = "";
   var linguagensSelecionadas = [];
+  double salarioescolhido = 0.0;
 
   @override
   void initState() {
@@ -118,6 +119,24 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
                           }),
                     )
                     .toList()),
+            const SizedBox(
+              height: 20,
+            ),
+             Text(
+              "pretenção salarial R\$ ${salarioescolhido.round().toString()}",
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700)
+            ),
+            Slider(min: 0.0,
+                max: 10000.0,
+                value: salarioescolhido,
+                onChanged: (double value){
+              setState(() {
+                salarioescolhido = value;
+              });
+              print(value);
+
+
+                }),
             TextButton(
               onPressed: () {
                 print(nomeController.text);

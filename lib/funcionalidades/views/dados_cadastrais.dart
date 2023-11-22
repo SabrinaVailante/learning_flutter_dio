@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class DadosCadastrais extends StatefulWidget {
@@ -23,15 +24,18 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
           children: [
             const Text(
               "Nome",
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
+              style: TextStyle(
+                  color: Colors.deepOrange,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w700),
             ),
             TextField(
               controller: nomeController,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Text(
+            const Text(
               "Data de Nascimento",
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
             ),
@@ -39,21 +43,21 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
               readOnly: true,
               controller: dataNascimentoController,
               onTap: () async {
-               var dataNascimento = await showDatePicker(
+                var dataNascimento = await showDatePicker(
                     context: context,
                     initialDate: DateTime.now(),
-                    firstDate: DateTime(1900,1,1),
-                    lastDate: DateTime.now());
-               print(dataNascimento);
-                 if (dataNascimento!= null){
-                   dataNascimentoController.text = dataNascimento.toString();
-               }
+                    firstDate: DateTime(1900, 1, 1),
+                    lastDate: DateTime(2030, 1, 1));
 
+                if (dataNascimento != null) {
+                  dataNascimentoController.text = dataNascimento.toString();
+                }
               },
             ),
             TextButton(
               onPressed: () {
                 print(nomeController.text);
+                print(dataNascimentoController.text);
               },
               child: const Text("salvar"),
             )

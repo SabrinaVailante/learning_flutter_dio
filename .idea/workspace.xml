@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="855ae123-1645-4f83-8b55-2cae07f792f3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01_introducao_ao_flutter/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/01_introducao_ao_flutter/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02_linguagem_de_programacao_dart/meu_app/lib/meu_app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/02_linguagem_de_programacao_dart/meu_app/lib/meu_app.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03_navegacao_e_widgets_em_flutter/1 - trilhaapp_inicial/lib/my_app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/03_navegacao_e_widgets_em_flutter/1 - trilhaapp_inicial/lib/my_app.dart" afterDir="false" />
-    </list>
+    <list default="true" id="855ae123-1645-4f83-8b55-2cae07f792f3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,6 +60,7 @@
       <workItem from="1716831957894" duration="110000" />
       <workItem from="1716832124377" duration="734000" />
       <workItem from="1716832899910" duration="450000" />
+      <workItem from="1716833383291" duration="303000" />
     </task>
     <servers />
   </component>

@@ -51,9 +51,6 @@
       <excludeFolder url="file://$MODULE_DIR$/Modulo6/pacotes/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/Modulo6/pacotes/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/Modulo6/pacotes/build" />
-      <excludeFolder url="file://$MODULE_DIR$/Modulo7/.dart_tool" />
-      <excludeFolder url="file://$MODULE_DIR$/Modulo7/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/Modulo7/build" />
       <excludeFolder url="file://$MODULE_DIR$/Modulo8/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/Modulo8/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/Modulo8/build" />
@@ -87,6 +84,9 @@
       <excludeFolder url="file://$MODULE_DIR$/03_navegacao_e_widgets_em_flutter/4-exibicao_de_dados/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/03_navegacao_e_widgets_em_flutter/4-exibicao_de_dados/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/03_navegacao_e_widgets_em_flutter/4-exibicao_de_dados/build" />
+      <excludeFolder url="file://$MODULE_DIR$/07_gerenciamento_de_estado_e_padroes_em_flutter/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/07_gerenciamento_de_estado_e_padroes_em_flutter/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/07_gerenciamento_de_estado_e_padroes_em_flutter/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

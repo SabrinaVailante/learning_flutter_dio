@@ -51,9 +51,6 @@
       <excludeFolder url="file://$MODULE_DIR$/Modulo6/pacotes/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/Modulo6/pacotes/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/Modulo6/pacotes/build" />
-      <excludeFolder url="file://$MODULE_DIR$/Modulo9/.dart_tool" />
-      <excludeFolder url="file://$MODULE_DIR$/Modulo9/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/Modulo9/build" />
       <excludeFolder url="file://$MODULE_DIR$/02_linguagem_de_programacao_dart/meu_app/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/02_linguagem_de_programacao_dart/meu_app/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/02_linguagem_de_programacao_dart/meu_app/build" />
@@ -87,6 +84,9 @@
       <excludeFolder url="file://$MODULE_DIR$/08_introducao_ao_firebase/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/08_introducao_ao_firebase/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/08_introducao_ao_firebase/build" />
+      <excludeFolder url="file://$MODULE_DIR$/09_publicando_apps_flutter/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/09_publicando_apps_flutter/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/09_publicando_apps_flutter/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

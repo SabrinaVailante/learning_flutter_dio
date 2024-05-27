@@ -60,6 +60,33 @@
       <excludeFolder url="file://$MODULE_DIR$/Modulo9/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/Modulo9/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/Modulo9/build" />
+      <excludeFolder url="file://$MODULE_DIR$/02_linguagem_de_programacao_dart/meu_app/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/02_linguagem_de_programacao_dart/meu_app/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/02_linguagem_de_programacao_dart/meu_app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/02_linguagem_de_programacao_dart/meu_app_ex/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/02_linguagem_de_programacao_dart/meu_app_ex/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/02_linguagem_de_programacao_dart/meu_app_ex/build" />
+      <excludeFolder url="file://$MODULE_DIR$/02_linguagem_de_programacao_dart/meu_app_lint/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/02_linguagem_de_programacao_dart/meu_app_lint/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/02_linguagem_de_programacao_dart/meu_app_lint/build" />
+      <excludeFolder url="file://$MODULE_DIR$/02_linguagem_de_programacao_dart/meu_app_oo/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/02_linguagem_de_programacao_dart/meu_app_oo/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/02_linguagem_de_programacao_dart/meu_app_oo/build" />
+      <excludeFolder url="file://$MODULE_DIR$/02_linguagem_de_programacao_dart/meu_app_testes/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/02_linguagem_de_programacao_dart/meu_app_testes/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/02_linguagem_de_programacao_dart/meu_app_testes/build" />
+      <excludeFolder url="file://$MODULE_DIR$/03_navegacao_e_widgets_em_flutter/1 - trilhaapp_inicial/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/03_navegacao_e_widgets_em_flutter/1 - trilhaapp_inicial/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/03_navegacao_e_widgets_em_flutter/1 - trilhaapp_inicial/build" />
+      <excludeFolder url="file://$MODULE_DIR$/03_navegacao_e_widgets_em_flutter/2-trilhaapp_tela_login/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/03_navegacao_e_widgets_em_flutter/2-trilhaapp_tela_login/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/03_navegacao_e_widgets_em_flutter/2-trilhaapp_tela_login/build" />
+      <excludeFolder url="file://$MODULE_DIR$/03_navegacao_e_widgets_em_flutter/3-trilhaapp_dados_cadastrais/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/03_navegacao_e_widgets_em_flutter/3-trilhaapp_dados_cadastrais/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/03_navegacao_e_widgets_em_flutter/3-trilhaapp_dados_cadastrais/build" />
+      <excludeFolder url="file://$MODULE_DIR$/03_navegacao_e_widgets_em_flutter/4-exibicao_de_dados/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/03_navegacao_e_widgets_em_flutter/4-exibicao_de_dados/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/03_navegacao_e_widgets_em_flutter/4-exibicao_de_dados/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

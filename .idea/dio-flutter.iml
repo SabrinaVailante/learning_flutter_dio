@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/Modulo2/meu_app/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo2/meu_app/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo2/meu_app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo2/meu_app_ex/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo2/meu_app_ex/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo2/meu_app_ex/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo2/meu_app_lint/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo2/meu_app_lint/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo2/meu_app_lint/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo2/meu_app_oo/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo2/meu_app_oo/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo2/meu_app_oo/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo2/meu_app_testes/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo2/meu_app_testes/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo2/meu_app_testes/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo3/1 - trilhaapp_inicial/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo3/1 - trilhaapp_inicial/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo3/1 - trilhaapp_inicial/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo3/2-trilhaapp_tela_login/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo3/2-trilhaapp_tela_login/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo3/2-trilhaapp_tela_login/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo3/3-trilhaapp_dados_cadastrais/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo3/3-trilhaapp_dados_cadastrais/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo3/3-trilhaapp_dados_cadastrais/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo3/4-exibicao_de_dados/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo3/4-exibicao_de_dados/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo3/4-exibicao_de_dados/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo4/hive/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo4/hive/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo4/hive/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo4/shared_preferences/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo4/shared_preferences/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo4/shared_preferences/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo4/sqlite/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo4/sqlite/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo4/sqlite/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo5/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo5/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo5/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo5/http/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo5/http/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo5/http/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo6/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo6/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo6/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo6/pacotes/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo6/pacotes/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo6/pacotes/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo7/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo7/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo7/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo8/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo8/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo8/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo9/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo9/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo9/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Dart SDK" level="project" />
+  </component>
+</module>
